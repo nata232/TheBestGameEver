@@ -5,15 +5,15 @@ using UnityEngine;
 public class HealthPotion : MonoBehaviour
 {
     public int healthAmount = 30;
-   [SerializeField] private PlayerHeal _playerHeal;
+   [SerializeField] private PlayerHealth _playerHeal;
     void OnTriggerEnter(Collider other)
     {
         //пробуем взять у объекта с которым мы столкнулись компонент системы здоровья
-        PlayerHeal player = other.GetComponent<PlayerHeal>();
+        PlayerHealth player = other.GetComponent<PlayerHealth>();
         //если такой действительно существует
         if (_playerHeal != null)
         {
-            _playerHeal = GetComponent<PlayerHeal>();
+            _playerHeal = GetComponent<PlayerHealth>();
             //добавляем игроку здоровье
             _playerHeal.AddHealth(-10);
             //уничтожаем объект лечилку
