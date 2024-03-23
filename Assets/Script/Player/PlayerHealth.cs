@@ -6,7 +6,25 @@ using UnityEngine.UI;
 public class PlayerHealth : MonoBehaviour
 {
    
-   public float value = 100;
+    public float value = 100;
+    public RectTransform valueRectTransform;
+    private float _maxValue;
+
+
+    public Slider Healthbar;
+    public GameObject PlayerUI;
+    public GameObject GameOverUI;
+
+    float _currentValue;
+
+    void Start()
+    {
+        _maxValue = value;
+        DrawHealthBar();
+
+        _currentValue = _maxValue;
+        UpdateHealthbar();
+    }
 
     public void DealDamage(float damage)
     {
@@ -16,22 +34,16 @@ public class PlayerHealth : MonoBehaviour
             Destroy(gameObject);
         }
 
-    }
+        DrawHealthBar();
 
-    public float MaxValue = 100;
-    public Slider Healthbar;
-
-    public GameObject PlayerUI;
-    public GameObject GameOverUI;
-
-    float _currentValue;
-
-    void Start()
+    }   
+       
+    public void DrawHealthBar()
     {
-        _currentValue = MaxValue;
-        UpdateHealthbar();
+        valueRectTransform.anchorMax = new Vector2(value / _maxValue, 1);
     }
 
+    
     public void TakeDamage(float damage)
     {
         _currentValue -= damage;
@@ -48,10 +60,10 @@ public class PlayerHealth : MonoBehaviour
         //Прибавить к текущему здоровью значение amount
         _currentValue += amount;
         //Если текущее здоровье больше, чем максимальное значение
-        if (_currentValue > MaxValue)
+        if (_currentValue > _maxValue)
         {
             //Текущее здоровье = максимальное значение
-            _currentValue = MaxValue;
+            _currentValue = _maxValue;
             
         }
         //Обновить полоску здоровья
@@ -60,7 +72,7 @@ public class PlayerHealth : MonoBehaviour
 
     void UpdateHealthbar()
     {
-        Healthbar.value = _currentValue / MaxValue;
+        Healthbar.value = _currentValue / _maxValue;
     }
     
     void GameOver()
