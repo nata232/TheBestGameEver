@@ -5,7 +5,6 @@ using UnityEngine;
 public class FireballSource : MonoBehaviour
 {
     public Transform targetPoint;
-<<<<<<< Updated upstream
     public Camera cameraLink;
     public float targetInSyDistance;
 
@@ -33,17 +32,3 @@ public class FireballSource : MonoBehaviour
 }
 
 
-=======
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    private void Update()
-    {
-        transform.LookAt(targetPoint.position);
-    }
-}
->>>>>>> Stashed changes

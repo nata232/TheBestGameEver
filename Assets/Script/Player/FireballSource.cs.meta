@@ -1,13 +1,5 @@
 fileFormatVersion: 2
-<<<<<<< Updated upstream
-guid: bc67ab4317dddc64a9eec978324992e7
-=======
-<<<<<<<< Updated upstream:Assets/Script/Enemy/EnemyHealth.cs.meta
-guid: ea6bdfcc71d0b9543b9e69d4d49d3c41
-========
-guid: 41cfc350a4e85f24893d72531b8a475f
->>>>>>>> Stashed changes:Assets/Script/Player/FireballSource.cs.meta
->>>>>>> Stashed changes
+guid: ad5bce0b156de434d859e79f9e8f90ce
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

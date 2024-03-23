@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d77ebe85294d80d4c9540fbdb032ac8c
+guid: 741f73214c8e59045b42ebac4be91444
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
@@ -542,20 +542,12 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Goblin_Rouge
-<<<<<<<< Updated upstream:Assets/Model/EnemyGoblin/Geometry/Goblin_rouge.fbx.meta
     second: {fileID: 2100000, guid: 936de8e925fb96f43baf023eb15adf55, type: 2}
-========
-    second: {fileID: 2100000, guid: ba9ed8f46aa841c46a5cabb9f8df427f, type: 2}
->>>>>>>> Stashed changes:Assets/EnemyGoblin/Geometry/Goblin_rouge.fbx.meta
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Goblin_ro_skin_b
-<<<<<<<< Updated upstream:Assets/Model/EnemyGoblin/Geometry/Goblin_rouge.fbx.meta
     second: {fileID: 2100000, guid: 3bd01de2d6a5d6341915b2f951af25b1, type: 2}
-========
-    second: {fileID: 2100000, guid: bd38ff3c0d8ee4a43a058333dea73317, type: 2}
->>>>>>>> Stashed changes:Assets/EnemyGoblin/Geometry/Goblin_rouge.fbx.meta
   materials:
     materialImportMode: 1
     materialName: 0
