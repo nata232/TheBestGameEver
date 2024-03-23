@@ -12,8 +12,8 @@ public class PlayerHealth : MonoBehaviour
 
 
     public Slider Healthbar;
-    public GameObject PlayerUI;
-    public GameObject GameOverUI;
+    public GameObject gameplayUI;
+    public GameObject gameOverScreen;
 
     float _currentValue;
 
@@ -22,8 +22,8 @@ public class PlayerHealth : MonoBehaviour
         _maxValue = value;
         DrawHealthBar();
 
-        _currentValue = _maxValue;
-        UpdateHealthbar();
+       // _currentValue = _maxValue;
+        //UpdateHealthbar();
     }
 
     public void DealDamage(float damage)
@@ -31,10 +31,11 @@ public class PlayerHealth : MonoBehaviour
         value -= damage / 10;
         if (value <= 0)
         {
-            Destroy(gameObject);
+            PlayerIsDead();
         }
 
         DrawHealthBar();
+
 
     }   
        
@@ -43,14 +44,14 @@ public class PlayerHealth : MonoBehaviour
         valueRectTransform.anchorMax = new Vector2(value / _maxValue, 1);
     }
 
-    
+    /*
     public void TakeDamage(float damage)
     {
         _currentValue -= damage;
         if (_currentValue <= 0)
         {
             _currentValue = 0;
-            GameOver();
+            PlayerIsDead();
         }
         UpdateHealthbar();
     }
@@ -73,13 +74,14 @@ public class PlayerHealth : MonoBehaviour
     void UpdateHealthbar()
     {
         Healthbar.value = _currentValue / _maxValue;
-    }
+    }*/
     
-    void GameOver()
+    void PlayerIsDead()
     {
-        PlayerUI.SetActive(false);
-        GameOverUI.SetActive(true);
+        gameplayUI.SetActive(false);
+        gameOverScreen.SetActive(true);
         GetComponent<PlayerController>().enabled = false;
+        GetComponent<FireballCaster>().enabled = false;
         GetComponent<CameraRotation>().enabled = false;
     }
 }

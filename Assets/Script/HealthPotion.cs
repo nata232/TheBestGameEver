@@ -15,7 +15,7 @@ public class HealthPotion : MonoBehaviour
         {
             _playerHeal = GetComponent<PlayerHealth>();
             //добавляем игроку здоровье
-            _playerHeal.AddHealth(-10);
+            ////////////////////////////////////_playerHeal.AddHealth(-10);/////////////////////
             //уничтожаем объект лечилку
             Destroy(gameObject);
         }

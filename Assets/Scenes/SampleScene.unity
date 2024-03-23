@@ -869,6 +869,7 @@ MonoBehaviour:
   - {fileID: 1269092985}
   player: {fileID: 1975812958}
   viewAngle: 90
+  damage: 30
 --- !u!195 &942051968
 NavMeshAgent:
   m_ObjectHideFlags: 0
