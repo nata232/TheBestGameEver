@@ -24,8 +24,7 @@ public class Fireball : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         DamageEnemy(collision);
-        DestroyFireball();
-        
+        DestroyFireball();        
     }
     private void DamageEnemy(Collision collision)
     {
