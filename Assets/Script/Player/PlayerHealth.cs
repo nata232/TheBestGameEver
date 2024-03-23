@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerHeal : MonoBehaviour
+public class PlayerHealth : MonoBehaviour
 {
    
    public float value = 100;

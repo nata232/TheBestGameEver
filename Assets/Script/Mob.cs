@@ -22,7 +22,7 @@ public class Mob : MonoBehaviour
             Agent.SetDestination(player.transform.position);
             if (Vector3.Distance(transform.position, player.transform.position) < AttackDistance)
             {
-                player.GetComponent<PlayerHeal>().TakeDamage(1);
+                player.GetComponent<PlayerHealth>().TakeDamage(1);
             }
         }
         else

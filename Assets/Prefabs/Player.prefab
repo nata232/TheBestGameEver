@@ -43,8 +43,8 @@ GameObject:
   - component: {fileID: 353557849060514036}
   - component: {fileID: 353557849060514034}
   - component: {fileID: 353557849060514039}
-  - component: {fileID: 353557849060514038}
   - component: {fileID: 7604546539555590055}
+  - component: {fileID: 5074847467653896041}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -82,7 +82,7 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 1.3
+  m_Height: 1.32
   m_Radius: 0.2
   m_SlopeLimit: 45
   m_StepOffset: 0.3
@@ -120,7 +120,22 @@ MonoBehaviour:
   gravity: 9.8
   jumpForce: 7
   speed: 5
---- !u!114 &353557849060514038
+--- !u!114 &7604546539555590055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 353557849060514035}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f79e764b711978244b68a17ab0c528e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fireballPrefab: {fileID: 3842799807782970472, guid: de83018d3d25c834f9fbd2d2278cd4cb,
+    type: 3}
+  fireballSourceTransform: {fileID: 6107306427614209386}
+--- !u!114 &5074847467653896041
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137,21 +152,6 @@ MonoBehaviour:
   Healthbar: {fileID: 0}
   PlayerUI: {fileID: 0}
   GameOverUI: {fileID: 0}
---- !u!114 &7604546539555590055
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 353557849060514035}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f79e764b711978244b68a17ab0c528e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fireballPrefab: {fileID: 3842799807782970472, guid: de83018d3d25c834f9fbd2d2278cd4cb,
-    type: 3}
-  fireballSourceTransform: {fileID: 6107306427614209386}
 --- !u!1 &353557850328413912
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,7 +351,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &588770987122519198
 Transform:
   m_ObjectHideFlags: 0
@@ -447,7 +447,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.7}
   m_AnchorMax: {x: 0.5, y: 0.7}
-  m_AnchoredPosition: {x: 0, y: -115}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2861497420970411083
