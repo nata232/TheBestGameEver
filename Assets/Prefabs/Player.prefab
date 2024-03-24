@@ -86,7 +86,7 @@ CharacterController:
   m_Radius: 0.2
   m_SlopeLimit: 45
   m_StepOffset: 0.3
-  m_SkinWidth: 0.02
+  m_SkinWidth: 0.01
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.82, z: 0}
 --- !u!114 &353557849060514034
@@ -153,6 +153,7 @@ MonoBehaviour:
   Healthbar: {fileID: 0}
   gameplayUI: {fileID: 8500676531606541403}
   gameOverScreen: {fileID: 678923432339254399}
+  animator: {fileID: 5906144534803671354}
 --- !u!1 &353557850328413912
 GameObject:
   m_ObjectHideFlags: 0
@@ -893,7 +894,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: 5e13a7a76a52750499bfd3c0446d519e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
