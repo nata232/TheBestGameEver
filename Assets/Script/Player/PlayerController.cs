@@ -3,14 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
-{
-    private CharacterController _characterController;
-    private float _fallVelocity = 0;
+{    
     public float gravity = 9.8f;
     public float jumpForce;
     public float speed;
-    private Vector3 _moveVector;
 
+    public Animation animator;
+
+    private Vector3 _moveVector;
+    private float _fallVelocity = 0;
+    private CharacterController _characterController;
 
     void Start()
     {
@@ -18,8 +20,13 @@ public class PlayerController : MonoBehaviour
     }
 
     void Update()
+    {        
+        MovementUpdate();
+        JumpUpdate();
+    }
+
+    private void MovementUpdate()
     {
-        //Movement
         _moveVector = Vector3.zero;
         if (Input.GetKey(KeyCode.W))
         {
@@ -37,11 +44,16 @@ public class PlayerController : MonoBehaviour
         {
             _moveVector -= transform.right;
         }
+    }
+
+    private void JumpUpdate()
+    {
         if (Input.GetKeyDown(KeyCode.Space) && _characterController.isGrounded)
         {
             _fallVelocity = -jumpForce;
         }
     }
+
     void FixedUpdate()
     {
         //Movement
