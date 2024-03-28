@@ -17,7 +17,6 @@ public class PlayerHealth : MonoBehaviour
     public GameObject gameKonezScreen;
     public Animator animator;
     public EnemyHealth EnemyHealth;
-    public int czethik = 1;
 
     float _currentValue;
 
@@ -25,8 +24,6 @@ public class PlayerHealth : MonoBehaviour
     {
         _maxValue = value;
         DrawHealthBar();
-        Konez();
-
 
        // _currentValue = _maxValue;
        //UpdateHealthbar();
@@ -91,23 +88,22 @@ public class PlayerHealth : MonoBehaviour
         GetComponent<CameraRotation>().enabled = false;
         animator.SetTrigger("death");
     }
-    
-    /*public void KonezGame()
+    public void KonezGame()
     {
-        gameplayUI.SetActive(false);
-        gameOverScreen.SetActive(false);
         gameKonezScreen.SetActive(true);
         GetComponent<PlayerController>().enabled = false;
         GetComponent<FireballCaster>().enabled = false;
         GetComponent<CameraRotation>().enabled = false;
     }
     public void Konez()
-    {        
-        if (czethik == 0)
-        {         
+    {
+        if (EnemyHealth.value == 0)
+        {
             KonezGame();
         }
-    }*/
+    }
+
+
 }
    
 

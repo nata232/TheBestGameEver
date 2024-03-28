@@ -11,10 +11,10 @@ NavMeshProjectSettings:
     cost: 1
   - name: Jump
     cost: 2
-  - name: 
-    cost: 1
-  - name: 
-    cost: 1
+  - name: Dom
+    cost: 3
+  - name: Stena
+    cost: 4
   - name: 
     cost: 1
   - name: 
