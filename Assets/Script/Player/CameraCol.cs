@@ -14,18 +14,18 @@ public class CameraCol : MonoBehaviour
         RaycastHit hit;
         if(Physics.Raycast(CameraAxis.position, ray, out hit, wishDistance))
         {
-            
-        }
-        else
-        {
             if (hit.collider.gameObject)
             {
                 transform.position = hit.point;
             }
-            else
+           /* else
             {
                 transform.position = CameraAxis.position + ray * wishDistance;
-            }
+            }*/
+        }
+        else
+        {
+                transform.position = CameraAxis.position + ray * wishDistance;
         }
     }
 }

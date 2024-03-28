@@ -136,6 +136,7 @@ MonoBehaviour:
   fireballPrefab: {fileID: 3842799807782970472, guid: de83018d3d25c834f9fbd2d2278cd4cb,
     type: 3}
   fireballSourceTransform: {fileID: 6107306427614209386}
+  audioSource: {fileID: 0}
 --- !u!114 &5074847467653896041
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202,7 +203,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CameraAxis: {fileID: 353557849004485974}
-  wishDistance: 2
+  wishDistance: 3
 --- !u!20 &353557850328413914
 Camera:
   m_ObjectHideFlags: 0
